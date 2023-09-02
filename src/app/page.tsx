@@ -56,6 +56,12 @@ export default function Home() {
 
     return false
   }
+
+  function clear() {
+    setValues([[],[],[]])
+    setWinner("")
+  }
+
   return (
     <main className={styles.main}>
       {winner && <div>
@@ -85,6 +91,7 @@ export default function Home() {
 
         </div>
 
+        <div><button onClick={clear} className={styles.button}>Clear</button></div>
 
       </div>
 
